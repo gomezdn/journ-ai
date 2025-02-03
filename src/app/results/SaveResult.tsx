@@ -7,16 +7,21 @@ export default function SaveResult({ result }: { result: Result }) {
     const [saved, setSaved] = useState(false)
 
     useEffect(() => {
-        setSaved(!!localStorage.getItem(result.url))
+        const results = JSON.parse(localStorage.getItem('results') || '{}')
+        setSaved(!!results[result.url])
     }, [result.url])
 
     function handleSave() {
-        localStorage.setItem(result.url, JSON.stringify(result))
+        const results = JSON.parse(localStorage.getItem('results') || '{}')
+        results[result.url] = result
+        localStorage.setItem('results', JSON.stringify(results))
         setSaved(true)
     }
 
     function handleRemove() {
-        localStorage.removeItem(result.url)
+        const results = JSON.parse(localStorage.getItem('results') || '{}')
+        delete results[result.url]
+        localStorage.setItem('results', JSON.stringify(results))
         setSaved(false)
     }
 

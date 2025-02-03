@@ -1,5 +1,6 @@
 import { Result } from "@/types";
 import ResultCard from "./ResultCard";
+import SavedResults from "./SavedResults";
 
 export default async function ResultsSection({ results, prompt, category }: { results: Result[], prompt: string, category: string }) {
     return (
@@ -8,6 +9,7 @@ export default async function ResultsSection({ results, prompt, category }: { re
                 Showing results for prompt ``<i className="text-md">{prompt}</i> `` with category focus set to <i>{category}</i>
             </p>
             <div className="flex flex-col gap-14 w-[60vw]">
+                <SavedResults />
                 {results.map(result => <ResultCard key={result.url} result={result}/>)}
             </div>
         </div>
