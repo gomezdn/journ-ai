@@ -19,3 +19,38 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.tiptap {
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+  
+  a {
+    color: rgb(6, 6, 167);
+    cursor: pointer;
+  }
+
+  padding: 2em;
+  outline: none;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 1.5rem 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+}
