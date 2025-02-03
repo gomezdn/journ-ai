@@ -1,4 +1,4 @@
-export type ExaRequest = {
+export type ExaSearchRequest = {
     query: string
     useAutoprompt: boolean
     type: string
@@ -9,15 +9,17 @@ export type ExaRequest = {
     }
 }
 
+export type ExaContentsRequest = {
+    urls: string[]
+    text: boolean
+}
+
 export type Result = {
     score: number
     title: string
     url: string
     author: string
-    text?: {
-        maxCharacters: number
-        includeHtmlTags: boolean
-    },
+    text?: string
     summary?: string
     image?: string
     publishedDate: string
