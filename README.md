@@ -19,7 +19,7 @@ Or
 -  And run it `npm run start`
 
 # Screenshots
-![Topic search form](screenshot.png)
-![Topic search results](screenshot-1.png)
-![Article generated through AI](screenshot-2.png)
-![AI assistant to continue modifying the article](screenshot-3.png)
+![Topic search form](/public/screenshot.png)
+![Topic search results](/public/screenshot-1.png)
+![Article generated through AI](/public/screenshot-2.png)
+![AI assistant to continue modifying the article](/public/screenshot-3.png)
